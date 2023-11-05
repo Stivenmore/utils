@@ -42,7 +42,7 @@ class Validators {
   }
 
   static String? isValidPassword(String? value) {
-    RegExp regExpEspecialCaracter = RegExp(r'^(?=.*?[!@#\$&*~?,¿¡_-])');
+    RegExp regExpEspecialCaracter = RegExp(r'^(?=.*?[!@#\$&*~?,¿¡_-])+');
     RegExp regExpUpperCase = RegExp(r'^(?=.*?[A-Z])');
     RegExp regExpNumber = RegExp(r'^(?=.*?[0-9])');
     if (isEmptyValue(value) != null) {

@@ -6,6 +6,26 @@ extension StringExtension on String {
     return '${this[0].toUpperCase()}${substring(1).toLowerCase()}';
   }
 
+  String lowcase() {
+    final text = this;
+    return text.toLowerCase();
+  }
+
+  String uppercase() {
+    final text = this;
+    return text.toUpperCase();
+  }
+
+  String splitFirst([String rex = ' ']) {
+    final text = this;
+    return text.split(rex).first;
+  }
+
+  String splitLast([String rex = ' ']) {
+    final text = this;
+    return text.split(rex).last;
+  }
+
   String deleteRegexSpace() {
     RegExp regex = RegExp(r'\s+');
     final text = this;

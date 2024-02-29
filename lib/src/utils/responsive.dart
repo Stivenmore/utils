@@ -16,4 +16,6 @@ class Responsive {
 
   double hp(double percent) => _height * percent / 100;
   double wp(double percent) => _width * percent / 100;
+  double width => _width;
+  double height => _height;
 }

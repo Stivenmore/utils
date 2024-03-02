@@ -52,20 +52,8 @@ extension WidgetExtension on Widget {
   }
 }
 
+
 extension ResponsiveExtension on BuildContext {
-  double hp(double percent) {
-    final size = Responsive(this).hp(percent);
-    return size;
-  }
-
-  double wp(double percent) {
-    final size = Responsive(this).wp(percent);
-    return size;
-  }
-}
-
-
-extension DoubleExtension on BuildContext {
   double wp([int v = 100]){
     final double width = MediaQuery.of(this).size.width;
      return width * v / 100;

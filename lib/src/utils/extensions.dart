@@ -63,3 +63,22 @@ extension ResponsiveExtension on BuildContext {
     return size;
   }
 }
+
+
+extension DoubleExtension on BuildContext {
+  double wp(int? v){
+    final double width = MediaQuery.of(this).size.width;
+    if (v != null) {
+     return width * v / 100;
+    }
+    return width;
+  }
+
+  double hp(int? v){
+    final double height = MediaQuery.of(this).size.height;
+    if (v != null) {
+      return height * v / 100;
+    }
+    return height;
+  }
+}
